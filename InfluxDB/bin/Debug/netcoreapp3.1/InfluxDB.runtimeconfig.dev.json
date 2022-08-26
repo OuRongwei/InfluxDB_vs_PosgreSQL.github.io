@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\欧荣维\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\欧荣维\\.nuget\\packages",
+      "F:\\C#\\DXAPi\\Components\\Offline Packages"
+    ]
+  }
+}

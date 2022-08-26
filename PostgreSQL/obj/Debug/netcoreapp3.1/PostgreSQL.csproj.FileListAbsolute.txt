@@ -1,0 +1,16 @@
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\bin\Debug\netcoreapp3.1\PostgreSQL.exe
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\bin\Debug\netcoreapp3.1\PostgreSQL.deps.json
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\bin\Debug\netcoreapp3.1\PostgreSQL.runtimeconfig.json
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\bin\Debug\netcoreapp3.1\PostgreSQL.runtimeconfig.dev.json
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\bin\Debug\netcoreapp3.1\PostgreSQL.dll
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\bin\Debug\netcoreapp3.1\PostgreSQL.pdb
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\obj\Debug\netcoreapp3.1\PostgreSQL.csproj.AssemblyReference.cache
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\obj\Debug\netcoreapp3.1\PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\obj\Debug\netcoreapp3.1\PostgreSQL.AssemblyInfoInputs.cache
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\obj\Debug\netcoreapp3.1\PostgreSQL.AssemblyInfo.cs
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\obj\Debug\netcoreapp3.1\PostgreSQL.csproj.CoreCompileInputs.cache
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\obj\Debug\netcoreapp3.1\PostgreSQL.csproj.CopyComplete
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\obj\Debug\netcoreapp3.1\PostgreSQL.dll
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\obj\Debug\netcoreapp3.1\PostgreSQL.pdb
+C:\Users\欧荣维\Desktop\时序数据库\PostgreSQL\obj\Debug\netcoreapp3.1\PostgreSQL.genruntimeconfig.cache
