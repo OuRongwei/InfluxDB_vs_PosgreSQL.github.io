@@ -1,5 +1,6 @@
 ﻿using InfluxDB.Client;
 using InfluxDB.Client.Api.Domain;
+using InfluxDB.Client.Core.Flux.Domain;
 using InfluxDB.Client.Writes;
 using System;
 using System.Collections.Generic;
@@ -24,49 +25,32 @@ namespace InfluxDB2
             client = InfluxDBClientFactory.Create("http://192.168.31.185:8086", token.ToCharArray());
         }
 
-        public async void WriteObjectData(int k)
+        public async void WriteObjectData(int k, int j)
         {
-            List<LoopStatusDetail> list = new List<LoopStatusDetail>();
-            var random = new Random();
-            for (var i = 1; i <= k; i++)
-            {
-                var mem = new LoopStatusDetail
-                {
-                    LoopId = "loop" + i,
-                    DeviceId = "10939",
-                    TeamId = "-1",
-                    LoopTypeId = "0486565c-e138-4dff-8b82-6c818331aa45",
-                    Ignore = false,
-                    Stable = random.NextDouble(),
-                    Status = 1,
-                    Time = DateTime.UtcNow
-                };
-
-                list.Add(mem);
-            }
-
             using (var writeApi = client.GetWriteApi())
             {
-                writeApi.WriteMeasurements(list, WritePrecision.Ns, bucket, org);
+                for (var i = 1; i <= k; i++)
+                {
+                    var mem = new LoopStatusDetail
+                    {
+                        Id = j * k + i,
+                        Name = j * k,
+                        Time = DateTime.UtcNow
+                    };
+                    writeApi.WriteMeasurement(mem, WritePrecision.Ns, bucket, org);
+                }
             }
         }
 
-        public async void WriteData(int k)
+        public async void WriteData(int k, int j)
         {
             List<PointData> list = new List<PointData>();
-            for (var i = 1; i <= k; i++)
+            for (int i = 1; i <= k; i++)
             {
-                double value = new Random().Next(1, k);
-                var point = PointData.Measurement(LoopStatusDetail.Name)
-                .Tag("loopid", "loop" + i)
-                .Field("deviceid", "10939")
-                .Field("teamid", "-1")
-                .Field("looptypeid", "0486565c-e138-4dff-8b82-6c818331aa45")
-                .Field("ignore", false)
-                .Field("status", 1)
-                //.Field("stable", -99999.99999)
-                .Field("stable", value)
-                .Timestamp(DateTime.UtcNow, WritePrecision.Ns);
+                var point = PointData.Measurement(LoopStatusDetail.Measurement)
+                    .Tag("loopid", (j * k + i).ToString())
+                    .Field("name", j * k)
+                    .Timestamp(DateTime.UtcNow, WritePrecision.Ms);
 
                 list.Add(point);
             }
@@ -77,41 +61,27 @@ namespace InfluxDB2
             }
         }
 
-        public async Task<List<LoopStatusDetail>> QueryData(List<string> loops)
+        public void QueryData()
         {
-            List<LoopStatusDetail> list = new List<LoopStatusDetail>();
+            var query = $"from(bucket: \"{ bucket}\") " +
+                        $"|> range(start: -10s) ";
+            //$"|> sort(columns:[\"loopid\"]) " +
+            //$"|> limit(n:1) ";
+            //$"|> yield()";
 
-            int pageSize = 1;
-            var pageCount = Math.Ceiling((double)loops.Count);
-
-            for (var j = 1; j <= pageCount; j++)
+            var fluxTables = client.GetQueryApi().QueryAsync(query, org);
+            var result = fluxTables.GetAwaiter().GetResult();
+            foreach (FluxTable item in result)
             {
-                var temp = loops.Skip((j - 1) * pageSize).Take(pageSize).ToList();
-                StringBuilder stringBuilder = new StringBuilder();
-                foreach (var loop in temp)
+                item.Records.ForEach(item =>
                 {
-                    stringBuilder.Append($" r[\"loopid\"] == \"{loop}\" or");
-                }
-                stringBuilder.Remove(stringBuilder.Length - 2, 2);
-
-                var filter = stringBuilder.ToString();
-
-                var query = $"from(bucket: \"{ bucket}\") |> range(start: {DateTime.UtcNow.AddMinutes(-30).ToString("yyyy-MM-ddTHH:mm:ssZ")},stop: {DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ")}) |> filter(fn: (r) =>{filter} )";
-
-                var fluxTables = await client.GetQueryApi().QueryAsync(query, org);
-                fluxTables.ForEach(fluxTable =>
-                {
-                    var key = fluxTable.GetGroupKey();
-                    var fluxRecords = fluxTable.Records;
-
-                    fluxRecords.ForEach(fluxRecord =>
-                    {
-                        string loopStatusDetail = $"{fluxRecord.GetValueByKey("loopid")}/{fluxRecord.GetField()}====>{fluxRecord.GetTime()}: {fluxRecord.GetValue()}";
-                        //Console.WriteLine(loopStatusDetail);
-                    });
+                    string ans = $"{item.GetTime()} : {item.GetValueByKey("loopid")} ------------- {item.GetValue()}";
+                    //Console.WriteLine(ans);
                 });
             }
-            return list;
+            //Console.WriteLine(result.Count);
+            result = null;
+            return;
         }
 
     }

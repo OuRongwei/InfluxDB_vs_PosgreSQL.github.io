@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r1C6f2Jis+m9XAlItigBklEypY5esyz2QO60MLOaCI4P9L9D3bQZkcWsEyip5+ys6qucomG9mlmWqNx9NJjcPw==",
+  "dgSpecHash": "Azy48mj577RVtafyROWjPTvm0lfMuPlyhjb2CTn7dirqGMzMQlPuBROb+HW6+W7l3+32/Uh4OXqaQdhM0RCyng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\欧荣维\\Desktop\\时序数据库\\InfluxDB2\\InfluxDB2.csproj",
+  "projectFilePath": "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\InfluxDB2\\InfluxDB2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\欧荣维\\.nuget\\packages\\csvhelper\\28.0.1\\csvhelper.28.0.1.nupkg.sha512",
     "C:\\Users\\欧荣维\\.nuget\\packages\\influxdb.client\\4.4.0\\influxdb.client.4.4.0.nupkg.sha512",

@@ -2964,11 +2964,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\欧荣维\\Desktop\\时序数据库\\InfluxDB2\\InfluxDB2.csproj",
+      "projectUniqueName": "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\InfluxDB2\\InfluxDB2.csproj",
       "projectName": "InfluxDB2",
-      "projectPath": "C:\\Users\\欧荣维\\Desktop\\时序数据库\\InfluxDB2\\InfluxDB2.csproj",
+      "projectPath": "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\InfluxDB2\\InfluxDB2.csproj",
       "packagesPath": "C:\\Users\\欧荣维\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\欧荣维\\Desktop\\时序数据库\\InfluxDB2\\obj\\",
+      "outputPath": "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\InfluxDB2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\C#\\DXAPi\\Components\\Offline Packages"
@@ -3026,7 +3026,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
       }
     }
   }
