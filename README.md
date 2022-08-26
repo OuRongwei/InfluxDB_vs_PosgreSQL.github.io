@@ -1,0 +1,6 @@
+# InfluxDB_vs_PosgreSQL.github.io
+用于测试InfluxDB和PostgreSQL读写速度的程序
+
+InfluxDB文件夹存放测试InfluxDB1.8版本读写效率代码
+InfluxDB2文件夹存放测试InfluxDB2.2版本读写效率代码
+PostgreSQL文件夹存放PostgreSQL读写效率代码
