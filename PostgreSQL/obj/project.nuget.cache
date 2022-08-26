@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wUgxw9s4eg6G4hqA/6YyBZSkMGlzOLIXzM2+KBJhkFfY7+msn223EiIldITIXz7PfOQVwlKH713c2LkJ4PY0fQ==",
+  "dgSpecHash": "7Vk9ci+QX+FCS0q/4RpzC8XHTWdh4hc3YWfbWD0y/6Ythmg+7+3Os/FBiN1HaSbaH5fQzTrD2+I1o1SjSgaPLA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\欧荣维\\Desktop\\时序数据库\\PostgreSQL\\PostgreSQL.csproj",
+  "projectFilePath": "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\PostgreSQL\\PostgreSQL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\欧荣维\\.nuget\\packages\\npgsql\\4.1.12\\npgsql.4.1.12.nupkg.sha512",
     "C:\\Users\\欧荣维\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"

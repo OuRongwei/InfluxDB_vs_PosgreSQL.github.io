@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\欧荣维\\Desktop\\时序数据库\\PostgreSQL\\PostgreSQL.csproj": {}
+    "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\PostgreSQL\\PostgreSQL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\欧荣维\\Desktop\\时序数据库\\PostgreSQL\\PostgreSQL.csproj": {
+    "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\PostgreSQL\\PostgreSQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\欧荣维\\Desktop\\时序数据库\\PostgreSQL\\PostgreSQL.csproj",
+        "projectUniqueName": "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\PostgreSQL\\PostgreSQL.csproj",
         "projectName": "PostgreSQL",
-        "projectPath": "C:\\Users\\欧荣维\\Desktop\\时序数据库\\PostgreSQL\\PostgreSQL.csproj",
+        "projectPath": "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\PostgreSQL\\PostgreSQL.csproj",
         "packagesPath": "C:\\Users\\欧荣维\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\欧荣维\\Desktop\\时序数据库\\PostgreSQL\\obj\\",
+        "outputPath": "F:\\GitHub\\InfluxDB_vs_PostgreSQL\\InfluxDB_vs_PosgreSQL.github.io\\PostgreSQL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "F:\\C#\\DXAPi\\Components\\Offline Packages"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     }
